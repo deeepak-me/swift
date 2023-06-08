@@ -1,0 +1,43 @@
+.container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141414;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1000;
+}
+
+/* .logo {
+  font-size: 22px;
+  font-weight: bold;
+} */
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  list-style-type: none;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.link:hover{
+    color: #D87D4A;
+}
+
+.cart {
+  /* width: 23.33px;
+  height: 20px; */
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* .cart:hover{
+    color: #D87D4A;
+} */
