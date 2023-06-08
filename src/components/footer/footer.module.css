@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
+  list-style-type: none;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.link:hover {
+  color: #d87d4a;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 48px;
+}
+
+.desc {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  width: 540px;
+  height: 100%;
+}
+
+.rights {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-top: 56px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
