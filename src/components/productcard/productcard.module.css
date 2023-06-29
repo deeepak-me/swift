@@ -46,15 +46,19 @@
 
 .button {
   display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .subtitle {
-  color: #000;
+  /* color: #000; */
   font-size: 13px;
   font-family: Manrope;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   margin-right: 14px;
 }
+
