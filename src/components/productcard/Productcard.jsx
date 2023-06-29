@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import styles from "./productcard.module.css";
 import productImg from "public/headphone1.png";
+import Button from "../button/Button";
 
 const ProductCard = () => {
   return (
@@ -13,10 +14,12 @@ const ProductCard = () => {
         </div>
 
         <h2 className={styles.title}>headphones</h2>
-        <span className={styles.button}>
-          <h3 className={styles.subtitle}>SHOP</h3>
-          <Image src="/arrow.svg" width={5} height={10} />
-        </span>
+        <Button secondary>
+          <div className={styles.button}>
+            <div className={styles.subtitle}>SHOP</div>
+            <Image src="/arrow.svg" width={5} height={10} />
+          </div>
+        </Button>
       </div>
     </div>
   );
