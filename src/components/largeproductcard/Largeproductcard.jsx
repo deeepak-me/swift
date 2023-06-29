@@ -18,7 +18,7 @@ const LargeProductCard = () => {
             Upgrade to premium speakers that are <br /> phenomenally built to deliver
             truly remarkable <br /> sound.
           </p>
-          <Button />
+          <Button primary>See Product</Button>
         </div>
       </div>
     </div>
