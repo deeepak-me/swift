@@ -52,6 +52,16 @@ const StyledButton = styled.button`
         color: #D87D4A; 
       }
     `}
+    ${props => props.bordered && css`
+      background: transparent;
+      border: 1px solid #000;
+      color:#000;
+
+      &:hover{
+            background-color: #000;
+            color:#fff;
+      }
+    `}
 `;
 
 const Button = ({ children, ...rest }) => {
