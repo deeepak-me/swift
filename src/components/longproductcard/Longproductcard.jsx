@@ -10,7 +10,7 @@ import Button from "../button/Button";
 import { styled } from "styled-components";
 
 const Bg = styled.div`
-  background-image: ;
+  background-image: url(${productImg});
 `;
 const Title = styled.h4`
   color: #000;
