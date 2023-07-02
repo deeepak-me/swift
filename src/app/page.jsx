@@ -1,3 +1,4 @@
+import BrandCard from "@/components/brandcarrd/BrandCard";
 import { Hero } from "@/components/hero/Hero";
 import LargeProductCard from "@/components/largeproductcard/Largeproductcard";
 import LongProductCard from "@/components/longproductcard/Longproductcard";
@@ -10,6 +11,7 @@ export default function Home() {
       <ProductCard />
       <LargeProductCard />
       <LongProductCard/>
+      <BrandCard />
     </div>
   );
 }
