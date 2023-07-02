@@ -1,0 +1,36 @@
+"use client";
+
+import React from "react";
+
+import { styled, css } from "styled-components";
+
+const Para = styled.p`
+  color: #000;
+  font-size: 15px;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+`;
+
+const BrandCard = () => {
+  return (
+    <div>
+      <div>
+        <h2>
+          Bringing you the <span>best</span> audio gear
+        </h2>
+        <Para>
+          Located at the heart of New York City, Audiophile is the premier store
+          for high end headphones, earphones, speakers, and audio accessories.
+          We have a large showroom and luxury demonstration rooms available for
+          you to browse and experience a wide range of our products. Stop by our
+          store to meet some of the fantastic people who make Audiophile the
+          best place to buy your portable audio equipment.
+        </Para>
+      </div>
+    </div>
+  );
+};
+
+export default BrandCard;
