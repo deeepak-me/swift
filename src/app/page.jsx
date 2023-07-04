@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero/Hero";
 import LargeProductCard from "@/components/largeproductcard/Largeproductcard";
 import LongProductCard from "@/components/longproductcard/Longproductcard";
 import ProductCard from "@/components/productcard/Productcard";
+import SimpleCard from "@/components/simplecard/Simplecard";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <ProductCard />
       <LargeProductCard />
       <LongProductCard/>
-      <BrandCard />
+      <SimpleCard />
+      {/* <BrandCard /> */}
     </div>
   );
 }
