@@ -30,15 +30,15 @@ const Title = styled.h4`
   margin-bottom: 32px;
 `;
 
-const Simplecard = () => {
+const SimpleCard = () => {
   return (
     <Card>
       <Info>
         <Title>YX1 EARPHONES</Title>
-        <Button bordered>See Product</Button>
+        <Button variant="bordered">See Product</Button>
       </Info>
     </Card>
   );
 };
 
-export default Simplecard;
+export default SimpleCard;
