@@ -35,7 +35,7 @@ const LongProductCard = () => {
       {/* <Image src={productImg} /> */}
       <Info>
         <Title>ZX7 SPEAKER</Title>
-        <Button bordered>See Product</Button>
+        <Button variant="bordered">See Product</Button>
       </Info>
     </Bg>
   );
