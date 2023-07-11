@@ -24,7 +24,7 @@ const StyledButton = styled.button`
   }
 
   ${(props) =>
-    props.primary &&
+    props.color === "primary" &&
     css`
       background: #000;
       color: #fff;
@@ -37,7 +37,7 @@ const StyledButton = styled.button`
     `}
 
   ${(props) =>
-    props.secondary &&
+    props.color === "secondary" &&
     css`
       display: flex;
       justify-content: center;
@@ -52,7 +52,7 @@ const StyledButton = styled.button`
         color: #D87D4A; 
       }
     `}
-    ${props => props.bordered && css`
+    ${props => props.variant === "bordered" && css`
       background: transparent;
       border: 1px solid #000;
       color:#000;
