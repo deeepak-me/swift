@@ -15,7 +15,7 @@ a{
   color: inherit;
 }
 
-.container{
+/* .container{
   max-width: 1366px;
   min-height: 100vh;
   margin: 0 auto;
@@ -25,4 +25,4 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
