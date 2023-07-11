@@ -4,6 +4,12 @@
   height: 284px;
 } */
 
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .item {
   height: 160px;
   width: 122.9473648071289px;
