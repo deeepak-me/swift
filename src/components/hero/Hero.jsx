@@ -8,11 +8,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 46.5px;
-  background-color: #141414; 
+  background-color: #141414;
   color: #fff;
   padding-left: 165px;
-  padding-right:121px;
-
+  padding-right: 121px;
 `;
 const Item = styled.div`
   flex: 1;
@@ -41,6 +40,14 @@ const Desc = styled.p`
   mix-blend-mode: normal;
   opacity: 0.75;
 `;
+const ImageWrap = styled.div`
+  position: relative;
+  top: -100px;
+  /* flex: 1; */
+  display: flex;
+  /* flex-direction: column;
+  gap: 24px; */
+`;
 const Img = styled(Image)`
   width: 708.8px;
   /* height: 886px; */
@@ -63,9 +70,9 @@ export function Hero() {
         </Desc>
         <Button>See Product</Button>
       </Item>
-      <Item>
-        <Img src={heroImg}  />
-      </Item>
+      <ImageWrap>
+        <Img src={heroImg} />
+      </ImageWrap>
     </Container>
     // <div className={styles.container}>
     //   <div className={styles.item}>
