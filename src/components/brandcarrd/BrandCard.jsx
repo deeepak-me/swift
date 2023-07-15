@@ -7,14 +7,17 @@ import { styled, css } from "styled-components";
 import person from "public/person.png";
 
 const Info = styled.div`
-  width: 1110px;
+  /* width: 1110px; */
+  width:auto;
   height: 588px;
   flex-shrink: 0;
   border-radius: 8px;
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
+  /* background: #FAFAFA; */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
 `;
 
 const Content = styled.div`
@@ -27,7 +30,7 @@ const Content = styled.div`
 const Title = styled.h2`
   color: #000;
   font-size: 40px;
-  font-family: Manrope;
+  /* font-family: Manrope; */
   font-style: normal;
   font-weight: 700;
   line-height: 44px;
@@ -43,11 +46,11 @@ const Orange = styled.span`
 const Para = styled.p`
   color: #000;
   font-size: 15px;
-  font-family: Manrope;
+  /* font-family: Manrope; */
   font-style: normal;
   font-weight: 500;
   line-height: 25px;
-  /* opacity: 0.5; */
+  opacity: 0.5;
 `;
 
 const Item = styled.div`
@@ -56,7 +59,7 @@ const Item = styled.div`
   flex-shrink: 0;
   border-radius: 8px;
   /* background: #f1f1f1; */
-  background: red;
+  /* background: red; */
 `;
 
 const Img = styled(Image)`
