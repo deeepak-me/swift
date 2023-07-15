@@ -1,11 +1,56 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+"use client";
 
-import styles from'./footer.module.css'
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+import styles from "./footer.module.css";
+// import { styled } from "styled-components";
+
+// const Container = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   background-color: #141414;
+//   color: #fff;
+// `;
+// const Links = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   gap: 34px;
+//   list-style-type: none;
+// `;
+// const StyledLink = styled(Link)`
+//   font-weight: 700;
+//   font-size: 13px;
+// `;
 
 const Footer = () => {
   return (
+    // <Container>
+    //   <Links>
+    //     <StyledLink href="/">
+    //       <Image src="/audiophile2.svg" width={143} height={25} />
+    //     </StyledLink>
+    //   </Links>
+    //   <div>
+    //     <Links>
+    //       <StyledLink href="/">
+    //         <li>HOME</li>
+    //       </StyledLink>
+    //       <StyledLink href="/headphones">
+    //         <li>HEADPHONES</li>
+    //       </StyledLink>
+    //       <StyledLink href="/blog">
+    //         <li>SPEAKERS</li>
+    //       </StyledLink>
+    //       <StyledLink href="/contact">
+    //         <li>EARPHONES</li>
+    //       </StyledLink>
+    //     </Links>
+    //   </div>
+    // </Container>
+
     <div className={styles.container}>
       <div className={styles.links}>
         <Link href='/' className={styles.logo}><Image src="/audiophile2.svg" width={143} height={25} /></Link>
@@ -30,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
