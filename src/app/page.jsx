@@ -13,23 +13,30 @@ import isPropValid from "@emotion/is-prop-valid";
 // const StyledHero = styled.div`
 //   background-color: #141414;
 // `;
-const StyledHero = styled(SimpleCard)`
-  background-color: #141414;
-  margin-left: 165px;
-`
+const StyledHero = styled.div`
+  /* background-color: #141414; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 200px;
+
+  /* margin-left: 165px; */
+`;
 export default function Home() {
   return (
     <StyleSheetManager shouldForwardProp={isPropValid}>
       <div>
         {/* <StyledHero /> */}
-          <Hero />
+        <Hero />
         {/* </StyledHero> */}
         <ProductCard />
         <LargeProductCard />
         <LongProductCard />
-        <ImageCard />
-        <StyledHero />
-        {/* <SimpleCard /> */}
+        <StyledHero>
+          <ImageCard />
+          <SimpleCard />
+        </StyledHero>
         <BrandCard />
       </div>
     </StyleSheetManager>
