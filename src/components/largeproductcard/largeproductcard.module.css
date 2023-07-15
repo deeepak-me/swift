@@ -7,25 +7,28 @@
 }
 
 .cardDesc {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    top: 96px;
-    margin-left: 117px;
-  }
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  top: 96px;
+  margin-left: 117px;
+}
 
-.item{
+.item {
   width: 410.234px;
   height: 493px;
   flex-shrink: 0;
   margin-right: 138px;
 }
 
-.cardInfo{
-    margin-right: 95px;
-    position: relative;
-    top: -68px;
+.cardInfo {
+  margin-right: 95px;
+  position: relative;
+  top: -68px;
+  width: 349px;
+  height: 303px;
+  flex-shrink: 0;
 }
 
 .title {
