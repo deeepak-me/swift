@@ -21,7 +21,7 @@ const Info = styled.div`
 const Title = styled.h4`
   color: #000;
   font-size: 28px;
-  font-family: Manrope;
+  /* font-family: Manrope; */
   font-style: normal;
   font-weight: 700;
   line-height: normal;
