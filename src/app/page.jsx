@@ -25,7 +25,7 @@ const StyledHero = styled.div`
 `;
 export default function Home() {
   return (
-    <StyleSheetManager shouldForwardProp={isPropValid}>
+    // <StyleSheetManager shouldForwardProp={isPropValid}>
       <div>
         {/* <StyledHero /> */}
         <Hero />
@@ -39,6 +39,6 @@ export default function Home() {
         </StyledHero>
         <BrandCard />
       </div>
-    </StyleSheetManager>
+    // </StyleSheetManager>
   );
 }
