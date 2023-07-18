@@ -10,10 +10,16 @@ import { styled } from "styled-components";
 
 const Container = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const ProductCards = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 165px;
-  padding-right: 165px;
+  /* padding-left: 165px;
+  padding-right: 165px; */
   gap: 30px;
   margin-top: 200px;
   margin-bottom: 168px;
@@ -29,6 +35,9 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* padding-left: 108.5px; */
+  /* padding-right: 108.5px; */
+  /* padding-bottom: 30px; */
 `
 const CardDesc = styled.div`
   position: relative;
@@ -81,6 +90,7 @@ const ProductCard = () => {
 
   return (
     <Container>
+      <ProductCards>
       {products.map((product) => (
         <Info key={product.id}>
           <CardDesc>
@@ -98,6 +108,7 @@ const ProductCard = () => {
           </CardDesc>
         </Info>
       ))}
+      </ProductCards>
     </Container>
 
     // <div className={styles.info}>
