@@ -16,19 +16,23 @@ const Container = styled.div`
 `;
 
 const Info = styled.div`
-  width: 1110px;
-  height: 560px;
+  /* width: 1110px;
+  height: 560px; */
   flex-shrink: 0;
   border-radius: 8px;
   background: #d87d4a;
+  
 `
 const CardDesc= styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  top: 96px;
+  /* top: 96px; */
+  top:29px;
   margin-left: 117px;
+  /* padding-top: 96px; */
+  padding-top:67px;
 `
 
 const Item = styled.div`
@@ -57,7 +61,7 @@ const Title = styled.h1`
 `
 const Para = styled.p`
   display: flex;
-  width: 349px;
+  /* width: 349px; */
   flex-direction: column;
   flex-shrink: 0;
   color: #fff;
