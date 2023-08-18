@@ -1,11 +1,17 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+// import Link from "next/link";
+// import Image from "next/image";
 
 // import styles from "./footer.module.css";
+import audiophile from "../../image/audiophile2.svg";
+import facebook from "../../image/facebook.svg";
+import twitter from "../../image/twitter.svg";
+import instagram from "../../image/instagram.svg";
+
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -13,12 +19,12 @@ const Container = styled.div`
   background-color: #141414;
   color: #fff;
   padding-right: 165px;
-  padding-left:165px;
-  padding-top:75px;
-  padding-bottom:48px;
+  padding-left: 165px;
+  padding-top: 75px;
+  padding-bottom: 48px;
   /* height:365px; */
 `;
-const Links = styled.div`
+const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,6 +43,15 @@ const LinksList = styled.ul`
 const StyledLink = styled(Link)`
   font-weight: 700;
   font-size: 13px;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 192.308% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
 
   &:hover {
     color: #d87d4a;
@@ -51,8 +66,8 @@ const Info = styled.div`
 `;
 
 const Item = styled.div`
- margin-right:466px;
-`
+  margin-right: 466px;
+`;
 
 const Desc = styled.p`
   font-style: normal;
@@ -76,33 +91,37 @@ const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Footer = () => {
   return (
     <Container>
-      <Links>
-        <StyledLink href="/">
-          <Image src="/audiophile2.svg" width={143} height={25} />
+      <StyledFooter>
+        <StyledLink to="/">
+          <img src={audiophile} width={143} height={25} />
         </StyledLink>
 
         <div>
           <LinksList>
-            <StyledLink href="/">
+            <StyledLink to="/">
               <li>HOME</li>
             </StyledLink>
-            <StyledLink href="/headphones">
+            <StyledLink to="/headphones">
               <li>HEADPHONES</li>
             </StyledLink>
-            <StyledLink href="/blog">
+            <StyledLink to="/blog">
               <li>SPEAKERS</li>
             </StyledLink>
-            <StyledLink href="/contact">
+            <StyledLink to="/contact">
               <li>EARPHONES</li>
             </StyledLink>
           </LinksList>
         </div>
-      </Links>
+      </StyledFooter>
 
       <Info>
         <Item>
@@ -115,9 +134,9 @@ const Footer = () => {
           <Rights>Copyright 2021. All Rights Reserved</Rights>
         </Item>
         <Icons>
-          <Image src="/facebook.svg" width={24} height={24} />
-          <Image src="/twitter.svg" width={24} height={24} />
-          <Image src="/instagram.svg" width={24} height={24} />
+          <img src={facebook} width={24} height={24} />
+          <img src={twitter} width={24} height={24} />
+          <img src={instagram} width={24} height={24} />
         </Icons>
       </Info>
     </Container>

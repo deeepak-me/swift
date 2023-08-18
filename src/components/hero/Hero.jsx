@@ -1,6 +1,6 @@
-import Image from "next/image";
+// import Image from "next/image";
 // import styles from "./hero.module.css";
-import heroImg from "public/Bitmap.png";
+import heroImg from "../../image/Bitmap.png";
 import Button from "../button/Button";
 import { styled } from "styled-components";
 
@@ -42,13 +42,13 @@ const Desc = styled.p`
 `;
 const ImageWrap = styled.div`
   position: relative;
-  top: -100px;
+  /* top: -100px; */
   /* flex: 1; */
   display: flex;
   /* flex-direction: column;
   gap: 24px; */
 `;
-const Img = styled(Image)`
+const Image = styled.img`
   width: 708.8px;
   /* height: 886px; */
   height: auto;
@@ -66,12 +66,12 @@ export function Hero() {
         <Title>XX99 Mark II Headphones</Title>
         <Desc>
           Experience natural, lifelike audio and exceptional build quality made
-          // for the passionate music enthusiast.
+          for the passionate music enthusiast.
         </Desc>
         <Button>See Product</Button>
       </Item>
       <ImageWrap>
-        <Img src={heroImg} />
+        <Image src={heroImg} />
       </ImageWrap>
     </Container>
     // <div className={styles.container}>

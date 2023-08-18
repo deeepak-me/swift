@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 // import styles from "./productcard.module.css";
-import productImg from "public/headphone1.png";
+import productImg from "../../image/headphone1.png";
+import speaker from "../../image/speaker3.png";
+import earBuds from "../../image/earbuds.png";
+import arrowImg from "../../image/arrow.svg";
 import Button from "../button/Button";
 import { styled } from "styled-components";
 
@@ -12,7 +15,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const ProductCards = styled.div`
   display: flex;
@@ -38,7 +41,7 @@ const Info = styled.div`
   /* padding-left: 108.5px; */
   /* padding-right: 108.5px; */
   /* padding-bottom: 30px; */
-`
+`;
 const CardDesc = styled.div`
   position: relative;
   display: flex;
@@ -46,13 +49,13 @@ const CardDesc = styled.div`
   flex-direction: column;
   align-items: center;
   top: -50px;
-`
+`;
 const Item = styled.div`
-  height: 160px;
-  width: 122.9473648071289px;
+  /* height: 160px; */
+  /* width: 122.9473648071289px; */
   border-radius: 0px;
   margin-bottom: 36px;
-`
+`;
 const Title = styled.h2`
   font-style: normal;
   font-weight: 700;
@@ -63,51 +66,56 @@ const Title = styled.h2`
   text-transform: uppercase;
   color: #000000;
   margin-bottom: 15px;
-`
+`;
 const StyledButton = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
-`
+`;
 const Subtitle = styled.div`
   font-size: 13px;
-  font-family: Manrope;
+  /* font-family: Manrope; */
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   /* opacity: 0.5; */
   margin-right: 14px;
-  margin-top: 6px;
-`
+  /* margin-top: 6px; */
+`;
+
+const Image = styled.img`
+  width: 5px;
+  height: 10px;
+`;
 
 const ProductCard = () => {
   const [products, setProducts] = useState([
-    { title: "headphones", subtitle: "SHOP", id: 1 },
-    { title: "speaker", subtitle: "SHOP", id: 2 },
-    { title: "earphone", subtitle: "SHOP", id: 3 },
+    { title: "headphones", subtitle: "SHOP", id: 1,image:productImg, },
+    { title: "speaker", subtitle: "SHOP", id: 2,image:speaker, },
+    { title: "earphone", subtitle: "SHOP", id: 3,image:earBuds },
   ]);
 
   return (
     <Container>
       <ProductCards>
-      {products.map((product) => (
-        <Info key={product.id}>
-          <CardDesc>
-            <Item>
-              <Image src={productImg} />
-            </Item>
+        {products.map((product) => (
+          <Info key={product.id}>
+            <CardDesc>
+              <Item>
+                <img src={product.image} />
+              </Item>
 
-            <Title>{product.title}</Title>
-            <Button color="secondary">
-              <StyledButton >
-                <Subtitle >{product.subtitle}</Subtitle>
-                <Image src="/arrow.svg" width={5} height={10} />
-              </StyledButton>
-            </Button>
-          </CardDesc>
-        </Info>
-      ))}
+              <Title>{product.title}</Title>
+              <Button color="secondary">
+                <StyledButton>
+                  <Subtitle>{product.subtitle}</Subtitle>
+                  <Image src={arrowImg} />
+                </StyledButton>
+              </Button>
+            </CardDesc>
+          </Info>
+        ))}
       </ProductCards>
     </Container>
 

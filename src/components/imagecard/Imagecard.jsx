@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
-import earPhone from "public/earphone.png";
+import earPhone from "../../image/earphone.png";
 import { styled } from "styled-components";
 
 const Card = styled.div`
@@ -13,7 +13,7 @@ const Card = styled.div`
   flex-shrink: 0;
   object-fit: contain;
 `;
-const Img = styled(Image)`
+const Img = styled.img`
   border-radius: 8px;
   object-fit: contain;
   background: #f1f1f1;

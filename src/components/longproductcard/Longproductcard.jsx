@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
-import productImg from "public/speaker2.png";
+import productImg from "../../image/speaker2.png";
 import Button from "../button/Button";
 
 import { styled } from "styled-components";
@@ -30,7 +30,7 @@ const Bg = styled.div`
   align-items: center;
 `;
 
-const Img = styled(Image)`
+const Img = styled.img`
   border-radius: 8px;
   object-fit:cover;
 `

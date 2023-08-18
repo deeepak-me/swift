@@ -1,14 +1,76 @@
+// "use client";
+
+// import React from "react";
+// import { styled } from "styled-components";
+// import { Link } from "react-router-dom";
+
+// import audiophile from "../../image/audiophile2.svg";
+// import cart from "../../image/cart.svg";
+
+// const Container = styled.div`
+//   padding-top: 34px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   width: 100%;
+// `;
+// const StyledNavbar = styled.div`
+//   height: 65px;
+//   width: 77%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   background-color: #141414;
+//   color: #ffffff;
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+//   position: relative;
+//   z-index: 1000;
+//   /* background: transparent; */
+//   /* padding-left: 165px;
+//    padding-right: 165px; */
+// `;
+
+// const Navbar = () => {
+//   return (
+//     <Container>
+//       <StyledNavbar>
+//         <Link to="/">
+//           <img src={audiophile} />
+//         </Link>
+//       </StyledNavbar>
+//     </Container>
+//   );
+// };
+
+// export default Navbar;
+
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link";
 import React from "react";
+import { Link } from "react-router-dom";
 
 // import styles from "./navbar.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 import { styled } from "styled-components";
 
+import audiophile from "../../image/audiophile2.svg";
+import cart from "../../image/cart.svg";
+
 const Container = styled.div`
-  height: 100px;
+  padding-top: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+`;
+
+const StyledNavbar = styled.div`
+  height: 65px;
+  width: 77%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,9 +80,9 @@ const Container = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   z-index: 1000;
-  /* background: transparent; */
-  padding-left: 165px;
-  padding-right: 165px;
+  background: transparent;
+  /* padding-left: 165px;
+  padding-right: 165px; */
 `;
 const StyledLinks = styled.ul`
   display: flex;
@@ -34,24 +96,47 @@ const StyledLinks = styled.ul`
 const StyledLink = styled(Link)`
   font-weight: 700;
   font-size: 13px;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration:none;
+
+  &:hover {
+    color: #d87d4a;
+  }
 `;
 const Navbar = () => {
   return (
     <Container>
-      <StyledLink href='/'>
-        <Image src="/audiophile2.svg" width={143} height={25} />
-      </StyledLink>
-      <div>
-        <StyledLinks>
-            <StyledLink href='/' ><li>HOME</li></StyledLink>
-            <StyledLink href='/headphones'><li>HEADPHONES</li></StyledLink>
-            <StyledLink href='/blog' ><li>SPEAKERS</li></StyledLink>
-            <StyledLink href='/contact' ><li>EARPHONES</li></StyledLink>
-        </StyledLinks>
-      </div>
-      <StyledLink href=''>
-        <Image src="/cart.svg" width={23.33} height={20} /> 
-      </StyledLink>
+      <StyledNavbar>
+        <StyledLink to="/">
+          <img src={audiophile} width={143} height={25} />
+        </StyledLink>
+        <div>
+          <StyledLinks>
+            <StyledLink to="/">
+              <li>HOME</li>
+            </StyledLink>
+            <StyledLink to="/Headphones">
+              <li>HEADPHONES</li>
+            </StyledLink>
+            <StyledLink to="/Speakers">
+              <li>SPEAKERS</li>
+            </StyledLink>
+            <StyledLink to="/Earphones">
+              <li>EARPHONES</li>
+            </StyledLink>
+          </StyledLinks>
+        </div>
+        <StyledLink to="">
+          <img src={cart} width={23.33} height={20} />
+        </StyledLink>
+      </StyledNavbar>
     </Container>
 
     // <div className={styles.container}>

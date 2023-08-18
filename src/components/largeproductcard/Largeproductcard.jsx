@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 // import styles from "./largeproductcard.module.css";
-import speaker from "public/speaker.png";
+import speaker from "../../image/speaker.png";
 import Button from "../button/Button";
 import { styled } from "styled-components";
 
@@ -81,7 +81,7 @@ const LargeProductCard = () => {
         <CardDesc>
           <Item>
             {/* <Image src={speaker} className={styles.img} /> */}
-            <Image src={speaker}  />
+            <img src={speaker}  />
           </Item>
           <CardInfo>
             <Title>

@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { styled, css } from "styled-components";
 
-import person from "public/person.png";
+import person from "../../image/person.png";
 
 const Info = styled.div`
   /* width: 1110px; */
@@ -62,7 +62,7 @@ const Item = styled.div`
   /* background: red; */
 `;
 
-const Img = styled(Image)`
+const Img = styled.img`
   border-radius: 8px;
 `;
 
