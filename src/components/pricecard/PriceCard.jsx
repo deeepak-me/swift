@@ -71,6 +71,7 @@ const Para = styled.p`
   font-weight: 500;
   line-height: 25px; /* 166.667% */
   margin-bottom: 32px;
+  opacity: 0.5;
 `;
 const Price = styled.h6`
   color: #000;
