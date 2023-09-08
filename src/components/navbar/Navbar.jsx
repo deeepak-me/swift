@@ -114,21 +114,21 @@ const Navbar = () => {
   return (
     <Container>
       <StyledNavbar>
-        <StyledLink to="/">
+        <StyledLink to="/swift">
           <img src={audiophile} width={143} height={25} />
         </StyledLink>
         <div>
           <StyledLinks>
-            <StyledLink to="/">
+            <StyledLink to="/swift">
               <li>HOME</li>
             </StyledLink>
-            <StyledLink to="/Headphones">
+            <StyledLink to="/swift/headphones">
               <li>HEADPHONES</li>
             </StyledLink>
-            <StyledLink to="/Speakers">
+            <StyledLink to="/swift/speakers">
               <li>SPEAKERS</li>
             </StyledLink>
-            <StyledLink to="/Earphones">
+            <StyledLink to="/swift/earphones">
               <li>EARPHONES</li>
             </StyledLink>
           </StyledLinks>
