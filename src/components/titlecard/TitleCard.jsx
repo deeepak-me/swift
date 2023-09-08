@@ -12,6 +12,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 160px;
 `;
 
 const Title = styled.h2`
@@ -26,10 +27,10 @@ const Title = styled.h2`
   text-transform: uppercase;
 `;
 
-const TitleCard = () => {
+const TitleCard = ({title}) => {
   return (
     <Container>
-      <Title>HEADPHONES</Title>
+      <Title>{title}</Title>
     </Container>
   );
 };
