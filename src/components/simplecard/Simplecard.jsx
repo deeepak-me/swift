@@ -12,6 +12,7 @@ const Card = styled.div`
   background: #f1f1f1;
   display: flex;
   align-items: center;
+  
 `;
 
 const Info = styled.div`
@@ -21,7 +22,6 @@ const Info = styled.div`
 const Title = styled.h4`
   color: #000;
   font-size: 28px;
-  /* font-family: Manrope; */
   font-style: normal;
   font-weight: 700;
   line-height: normal;

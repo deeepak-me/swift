@@ -18,7 +18,7 @@ const Container = styled.div`
 const Title = styled.h2`
   color: #fff;
   text-align: center;
-  /* font-family: Manrope; */
+  font-family: Manrope;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;

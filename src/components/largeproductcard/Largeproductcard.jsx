@@ -13,6 +13,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 48px;
+  font-family: Manrope;
 `;
 
 const Info = styled.div`

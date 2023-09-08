@@ -49,7 +49,7 @@ const Info = styled.div`
 const Title = styled.h5`
   color: #000;
   text-align: center;
-  /* font-family: Manrope; */
+  font-family: Manrope;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;

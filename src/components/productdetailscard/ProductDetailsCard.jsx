@@ -43,7 +43,7 @@ const Info = styled.div`
 
 const Intro = styled.h5`
   color: #d87d4a;
-  font-family: Manrope;
+  /* font-family: Manrope; */
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -54,7 +54,7 @@ const Intro = styled.h5`
 `;
 const Title = styled.h2`
   color: #000;
-  font-family: Manrope;
+  /* font-family: Manrope; */
   font-size: 40px;
   font-style: normal;
   font-weight: 700;

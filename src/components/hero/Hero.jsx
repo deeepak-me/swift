@@ -12,6 +12,7 @@ const Container = styled.div`
   color: #fff;
   padding-left: 165px;
   padding-right: 121px;
+  font-family: Manrope;
 `;
 const Item = styled.div`
   flex: 1;
@@ -63,7 +64,7 @@ export function Hero() {
     <Container>
       <Item>
         <Intro>NEW PRODUCT</Intro>
-        <Title>XX99 Mark II Headphones</Title>
+        <Title>XX99 Mark II HEADPHONES</Title>
         <Desc>
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.

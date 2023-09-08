@@ -17,6 +17,7 @@ const Container = styled.div`
   /* position:absolute; */
   /* padding-right: 165px;
   padding-left: 165px; */
+
 `;
 
 const Bg = styled.div`
@@ -37,7 +38,7 @@ const Img = styled.img`
 const Title = styled.h4`
   color: #000;
   font-size: 28px;
-  /* font-family: Manrope; */
+  font-family: Manrope;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
