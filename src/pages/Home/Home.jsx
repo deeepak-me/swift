@@ -2,14 +2,14 @@ import React from "react";
 
 import { styled } from "styled-components";
 
-import Navbar from '../../components/navbar/Navbar'
+import Navbar from "../../components/navbar/Navbar";
 import { Hero } from "../../components/hero/Hero";
 import LargeProductCard from "../../components/largeproductcard/Largeproductcard";
 import LongProductCard from "../../components/longproductcard/Longproductcard";
 import BrandCard from "../../components/brandcarrd/BrandCard";
 import SimpleCard from "../../components/simplecard/Simplecard";
-import Imagecard from "../../components/imagecard/Imagecard";
-import ProductCard  from '../../components/productcard/Productcard';
+import ImageCard from "../../components/imagecard/ImageCard";
+import ProductCard from "../../components/productcard/Productcard";
 import Footer from "../../components/footer/Footer";
 
 const StyledHero = styled.div`
@@ -32,8 +32,8 @@ const Home = () => {
       <LargeProductCard />
       <LongProductCard />
       <StyledHero>
+        <ImageCard />
         <SimpleCard />
-        <Imagecard />
       </StyledHero>
       <BrandCard />
       <Footer />
