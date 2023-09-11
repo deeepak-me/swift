@@ -15,7 +15,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Manrope;
+  /* font-family: Manrope; */
 `;
 
 const ProductCards = styled.div`
