@@ -62,6 +62,56 @@ const Input = styled.input`
   flex-shrink: 0;
   margin-bottom: 24px;
   opacity: 0.6;
+  /* width: 100%; */
+`;
+
+// const AddressInput = styled.input`
+//   border-radius: 8px;
+//   border: 1px solid #cfcfcf;
+//   background: #fff;
+//   padding-top: 18px;
+//   padding-bottom: 18px;
+//   padding-left: 24px;
+//   width: 100%;
+//   flex-shrink: 0;
+//   margin-bottom: 24px;
+//   opacity: 0.4;
+// `;
+
+const Option = styled.div`
+  width: 309px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin-bottom: 16px;
+
+  &:checked {
+    border-color: #d87d4a;
+  }
+`;
+const Label = styled.label`
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  margin-left: 16px;
+`;
+
+const Radial = styled.input`
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  &:checked {
+    accent-color: #d87d4a;
+  }
 `;
 const CheckOutCard = () => {
   return (
@@ -109,6 +159,26 @@ const CheckOutCard = () => {
         </Segment>
         <Segment>
           <SubTitle>payment details</SubTitle>
+          <div>
+            <Option>
+              <Radial type="radio" name="payment" id="e-Money" />
+              <Label htmlFor="e-Money">e-Money</Label>
+            </Option>
+            <Option>
+              <Radial type="radio" name="payment" id="cash" />
+              <Label htmlFor="cash">Cash on Delivery</Label>
+            </Option>
+          </div>
+          <FirstSeg>
+            <div>
+              <Heading>e-Money Number</Heading>
+              <Input type="text" placeholder="238521993" />
+            </div>
+            <div>
+              <Heading>e-Money PIN</Heading>
+              <Input type="text" placeholder="1244" />
+            </div>
+          </FirstSeg>
         </Segment>
       </div>
     </Container>
