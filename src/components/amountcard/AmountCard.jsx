@@ -8,6 +8,7 @@ const Container = styled.div`
   align-items: center; 
   /* justify-content: space-between; */
   gap: 16px;
+  margin-bottom: 24px;
 `;
 
 const ImageBg = styled.div`
