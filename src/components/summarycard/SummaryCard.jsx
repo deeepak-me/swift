@@ -3,6 +3,13 @@ import AmountCard from "../amountcard/AmountCard";
 import { styled } from "styled-components";
 import Button from "../button/Button";
 
+// const Container = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-bottom: 160px;
+// `;
+
 const Title = styled.h6`
   color: #000;
   font-size: 18px;
@@ -15,10 +22,10 @@ const Title = styled.h6`
 `;
 
 const Segment = styled.span`
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-`
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+`;
 
 const AmntDiv = styled.p`
   color: #000;
@@ -30,9 +37,9 @@ const AmntDiv = styled.p`
 `;
 
 const CheckOutBtn = styled(Button)`
-    padding-left: 56px;
-    padding-right: 56px;
-`
+  padding-left: 56px;
+  padding-right: 56px;
+`;
 
 const SummaryCard = () => {
   return (
