@@ -3,6 +3,7 @@ import React from "react";
 import ConfirmImg from "../../image/confirm.svg";
 import AmountCard from "../amountcard/AmountCard";
 import { styled } from "styled-components";
+import Button from "../button/Button";
 
 const ConfirmCard = styled.div`
   width: 540px;
@@ -13,7 +14,7 @@ const ConfirmCard = styled.div`
   padding: 48px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   justify-content: center;
   gap: 33px;
 `;
@@ -23,7 +24,7 @@ const Title = styled.h3`
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 36px; /* 112.5% */
+  /* line-height: 36px; 112.5% */
   letter-spacing: 1.143px;
   text-transform: uppercase;
 `;
@@ -41,14 +42,29 @@ const Content = styled.div`
   border-radius: 8px;
   background: #f1f1f1;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   /* padding: 24px; */
   gap: 24px;
 `;
 
+const Segment = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 33px;
+`;
+
+const FirstSeg = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 0px 24px 24px;
+`;
+
 const Underline = styled.div`
-  width: 198px;
+  /* width: 198px; */
   height: 1px;
   opacity: 0.08;
   background: #000;
@@ -58,11 +74,10 @@ const Number = styled.p`
   color: #000;
   font-family: Manrope;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: -0.214px;
   opacity: 0.5;
+  text-align: center;
 `;
 
 const Total = styled.div`
@@ -70,7 +85,7 @@ const Total = styled.div`
   background: #000;
   padding: 42px 65px 42px 32px;
   color: #fff;
-  font-family: Manrope;
+  /* font-family: Manrope; */
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;
@@ -88,24 +103,47 @@ const Rate = styled.h6`
   font-size: 18px;
   font-weight: 700;
 `;
+
+// const StyledAmountCard = styled(AmountCard)`
+//   margin-bottom: 100px;
+// `;
+
 const ConfirmationCard = () => {
   return (
     <div>
       <ConfirmCard>
-        <img src={ConfirmImg} />
-        <Title>THANK YOU FOR YOUR ORDER</Title>
-        <Subtitle>You will receive an email confirmation shortly.</Subtitle>
+        <Segment>
+          <img src={ConfirmImg} />
+          <Title>
+            THANK YOU <br />
+            FOR YOUR ORDER
+          </Title>
+          <Subtitle>You will receive an email confirmation shortly.</Subtitle>
+        </Segment>
+
         <Content>
-          <div>
+          <FirstSeg>
             <AmountCard />
             <Underline></Underline>
             <Number>and 2 other item(s)</Number>
-          </div>
+          </FirstSeg>
+          <Total>
+            <GrandTotal>GRAND TOTAL</GrandTotal>
+            <Rate> $5987 </Rate>
+          </Total>
+        </Content>
+        <Button>BACK TO HOME</Button>
+        {/* <Content>
+          <FirstSeg>
+            <AmountCard />
+            <Underline></Underline>
+            <Number>and 2 other item(s)</Number>
+          </FirstSeg>
           <Total>
             <GrandTotal>GRAND TOTAL</GrandTotal>
             <Rate>$5987</Rate>
           </Total>
-        </Content>
+        </Content> */}
       </ConfirmCard>
     </div>
   );
