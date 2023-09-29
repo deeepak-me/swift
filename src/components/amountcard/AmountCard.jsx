@@ -5,10 +5,10 @@ import { styled } from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  align-items: center; 
+  align-items: center;
   /* justify-content: space-between; */
   gap: 16px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
 `;
 
 const ImageBg = styled.div`
@@ -23,10 +23,10 @@ const Image = styled.img`
   flex-shrink: 0;
 `;
 const ProductGp = styled.span`
-    display: flex;
-    align-items: center;
-    gap: 114px;
-`
+  display: flex;
+  align-items: center;
+  gap: 114px;
+`;
 const ProductName = styled.p`
   color: #000;
   font-size: 15px;
