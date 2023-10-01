@@ -74,5 +74,6 @@ button:focus-visible {
 *{
   margin: 0;
   font-family: Manrope;
+  box-sizing: border-box;
 
 }

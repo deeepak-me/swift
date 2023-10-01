@@ -15,7 +15,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Manrope;
+  /* font-family: Manrope; */
 `;
 
 const ProductCards = styled.div`
@@ -25,7 +25,9 @@ const ProductCards = styled.div`
   /* padding-left: 165px;
   padding-right: 165px; */
   gap: 30px;
-  margin-top: 200px;
+  /* margin-top: 92px; */
+  /* margin-top: 200px; */
+  margin-top: 150px;
   margin-bottom: 168px;
 `;
 
@@ -92,9 +94,9 @@ const Image = styled.img`
 
 const ProductCard = () => {
   const [products, setProducts] = useState([
-    { title: "headphones", subtitle: "SHOP", id: 1,image:productImg, },
-    { title: "speaker", subtitle: "SHOP", id: 2,image:speaker, },
-    { title: "earphone", subtitle: "SHOP", id: 3,image:earBuds },
+    { title: "headphones", subtitle: "SHOP", id: 1, image: productImg },
+    { title: "speaker", subtitle: "SHOP", id: 2, image: speaker },
+    { title: "earphone", subtitle: "SHOP", id: 3, image: earBuds },
   ]);
 
   return (

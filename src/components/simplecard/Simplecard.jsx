@@ -5,8 +5,12 @@ import Button from "../button/Button";
 import { styled } from "styled-components";
 
 const Card = styled.div`
-  width: 540px;
-  height: 320px;
+  /* width: 540px;
+  height: 320px; */
+  padding-right: 198px;
+  padding-left: 95px;
+  padding-top: 92px;
+  padding-bottom: 92px;
   flex-shrink: 0;
   border-radius: 8px;
   background: #f1f1f1;
@@ -16,7 +20,7 @@ const Card = styled.div`
 `;
 
 const Info = styled.div`
-    margin-left: 95px;
+    /* margin-left: 95px; */
 `;
 
 const Title = styled.h4`

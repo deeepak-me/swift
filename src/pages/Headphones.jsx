@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-import headphoneImg from "../image/headphone3.png";
+import headphoneImgOne from "../image/headphone3.png";
+import headphoneImgTwo from "../image/headphone5.png";
+import headphoneImgThree from "../image/headphone4.png";
 
 import TitleCard from "../components/titlecard/TitleCard";
 import SuggestionCard from "../components/suggestioncard/SuggestionCard";
@@ -17,14 +19,21 @@ import ProductList from "../list/productlist/ProductList";
 const Headphones = () => {
   const [blogs, setBlogs] = useState([
     {
-      image: headphoneImg,
+      image: headphoneImgOne,
       title: "XX99 Mark I Headphones",
       about:
         "The new XX99 Mark II headphones is the pinnacle of pristine audio.It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
       price: "$ 2,999",
     },
     {
-      image: headphoneImg,
+      image: headphoneImgTwo,
+      title: "XX59 Headphones",
+      about:
+        "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
+      price: "$ 2,999",
+    },
+    {
+      image: headphoneImgThree,
       title: "XX59 Headphones",
       about:
         "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
@@ -35,17 +44,17 @@ const Headphones = () => {
   return (
     <div>
       <Navbar />
-      <TitleCard title="HEADPHONES"/>
+      <TitleCard title="HEADPHONES" />
       <ProductList blogs={blogs} />
       {/* <ProductDetailsCard blogs={blogs}  /> */}
       {/* <Cart />
       <PriceCard blogs={blogs} /> */}
       {/* <PriceCard blogs={blogs}/> */}
       {/* <FeatureCard />
-      <SuggestionCard />
+      <SuggestionCard /> */}
       <ProductCard />
       <BrandCard />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };

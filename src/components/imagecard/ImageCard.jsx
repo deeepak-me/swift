@@ -19,7 +19,7 @@ const Img = styled.img`
   background: #f1f1f1;
 `;
 
-const Imagecard = () => {
+const ImageCard = () => {
   return (
     <Card>
       <Img src={earPhone} />
@@ -27,4 +27,4 @@ const Imagecard = () => {
   );
 };
 
-export default Imagecard;
+export default ImageCard;

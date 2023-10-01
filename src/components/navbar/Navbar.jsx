@@ -54,7 +54,7 @@ import { Link } from "react-router-dom";
 
 // import styles from "./navbar.module.css";
 // import Image from "next/image";
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 
 import audiophile from "../../image/audiophile2.svg";
 import cart from "../../image/cart.svg";
@@ -66,6 +66,15 @@ const Container = styled.div`
   align-items: center;
   position: absolute;
   width: 100%;
+
+  /* background-color: #000;
+  z-index: 1000; */
+  ${(props) =>
+    props.color === "primary" &&
+    css`
+      background: #000;
+      /* color: #fff; */
+    `}
 `;
 
 const StyledNavbar = styled.div`
@@ -84,6 +93,7 @@ const StyledNavbar = styled.div`
   /* padding-left: 165px;
   padding-right: 165px; */
 `;
+
 const StyledLinks = styled.ul`
   display: flex;
   align-items: center;
@@ -104,15 +114,15 @@ const StyledLink = styled(Link)`
   line-height: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-decoration:none;
+  text-decoration: none;
 
   &:hover {
     color: #d87d4a;
   }
 `;
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <Container>
+    <Container {...props}>
       <StyledNavbar>
         <StyledLink to="/swift">
           <img src={audiophile} width={143} height={25} />

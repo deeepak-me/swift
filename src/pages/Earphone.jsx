@@ -7,6 +7,10 @@ import ProductCard from "../components/productcard/Productcard";
 import ProductList from "../list/productlist/ProductList";
 
 import headphoneImg from "../image/earbuds2.png";
+import ImageGroupCard from "../components/imagegroupcard/ImageGroupCard";
+import CheckOutCard from "../components/checkoutcard/CheckOutCard";
+import SummaryCard from "../components/summarycard/SummaryCard";
+import ConfirmationCard from "../components/confirmationcard/ConfirmationCard";
 
 const Earphone = () => {
   const [blogs, setBlogs] = useState([
@@ -21,10 +25,14 @@ const Earphone = () => {
   return (
     <div>
       <Navbar />
-      <TitleCard title="EARPHONES"/>
+      <TitleCard title="EARPHONES" />
       <ProductList blogs={blogs} />
       <ProductCard />
       <BrandCard />
+      <ImageGroupCard />
+      <CheckOutCard />
+      <SummaryCard  />
+      <ConfirmationCard />
       <Footer />
     </div>
   );
