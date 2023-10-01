@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { styled, css } from "styled-components";
 
@@ -49,23 +49,39 @@ const StyledButton = styled.button`
 
       &:hover {
         background: none;
-        color: #D87D4A; 
+        color: #d87d4a;
       }
     `}
-    ${props => props.variant === "bordered" && css`
+    ${(props) =>
+    props.variant === "bordered" &&
+    css`
       background: transparent;
       border: 1px solid #000;
-      color:#000;
+      color: #000;
 
-      &:hover{
-            background-color: #000;
-            color:#fff;
+      &:hover {
+        background-color: #000;
+        color: #fff;
       }
     `}
 `;
 
 const Button = ({ children, ...rest }) => {
-  return <StyledButton {...rest}>{children}</StyledButton>;
+  function getStyles(props) {
+    let classes = [];
+
+    if (props.color === "red") {
+      classes.push("red-btn");
+    }
+
+    return classes.join(" ");
+  }
+
+  return (
+    <StyledButton {...rest} className={getStyles(rest)}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;
