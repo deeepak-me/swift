@@ -3,12 +3,18 @@ import AmountCard from "../amountcard/AmountCard";
 import { styled } from "styled-components";
 import Button from "../button/Button";
 
-// const Container = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-bottom: 160px;
-// `;
+const Container = styled.div`
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 160px; */
+  border-radius: 8px;
+  background: #fff;
+  /* width: 350px; */
+  height: 100%;
+  flex-shrink: 0;
+  padding: 32px;
+`;
 
 const Title = styled.h6`
   color: #000;
@@ -19,6 +25,13 @@ const Title = styled.h6`
   letter-spacing: 1.286px;
   text-transform: uppercase;
   margin-bottom: 30px;
+`;
+
+const StyledAmountCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
 `;
 
 const Segment = styled.span`
@@ -43,11 +56,13 @@ const CheckOutBtn = styled(Button)`
 
 const SummaryCard = () => {
   return (
-    <div>
+    <Container>
       <Title>Summary</Title>
-      <AmountCard />
-      <AmountCard />
-      <AmountCard />
+      <StyledAmountCard>
+        <AmountCard />
+        <AmountCard />
+        <AmountCard />
+      </StyledAmountCard>
       <div>
         <Segment>
           <AmntDiv>TOTAL</AmntDiv>
@@ -67,7 +82,7 @@ const SummaryCard = () => {
         </Segment>
       </div>
       <CheckOutBtn>CONTINUE & PAY</CheckOutBtn>
-    </div>
+    </Container>
   );
 };
 
