@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Headphones from "./pages/Headphones";
 import Earphone from "./pages/Earphone";
 import Speakers from "./pages/Speakers";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="headphones" element={<Headphones />} />
             <Route path="speakers" element={<Speakers />} />
             <Route path="earphones" element={<Earphone />} />
+            <Route path="checkout" element={<Checkout />} />
           </Route>
         </Routes>
       </div>
