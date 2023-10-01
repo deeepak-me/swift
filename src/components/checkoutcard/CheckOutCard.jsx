@@ -6,6 +6,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 160px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 48px;
 `;
 
 const Title = styled.h3`
