@@ -15,7 +15,8 @@ const SuggestionCards = styled.div`
   /* padding-left: 165px;
   padding-right: 165px; */
   gap: 30px;
-  margin-top: 200px;
+  /* margin-top: 200px; */
+  margin-top: 65px;
   margin-bottom: 168px;
 `;
 
