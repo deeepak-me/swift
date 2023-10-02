@@ -14,10 +14,11 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 124.5px;
   overflow: hidden;
+  width: 100%;
 `;
 
 const Item = styled.div`
@@ -130,9 +131,7 @@ const NumberButton = styled.span`
   text-transform: uppercase;
 `;
 
-const PriceCard = ({blogs}) => {
-  
-
+const PriceCard = ({ blogs }) => {
   return (
     <Container>
       {blogs.map((blog) => (
