@@ -9,6 +9,7 @@ const Container = styled.div`
   border-radius: 8px;
   background: #fff;
   padding: 48px;
+  width: 100%;
 `;
 
 const Title = styled.h3`
