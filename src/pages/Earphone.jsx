@@ -29,10 +29,10 @@ const Earphone = () => {
       <ProductList blogs={blogs} />
       <ProductCard />
       <BrandCard />
-      <ImageGroupCard />
+      {/* <ImageGroupCard />
       <CheckOutCard />
       <SummaryCard  />
-      <ConfirmationCard />
+      <ConfirmationCard /> */}
       <Footer />
     </div>
   );
