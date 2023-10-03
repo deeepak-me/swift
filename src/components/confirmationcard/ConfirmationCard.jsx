@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ConfirmImg from "../../image/confirm.svg";
 import AmountCard from "../amountcard/AmountCard";
 import { styled } from "styled-components";
 import Button from "../button/Button";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+`;
 
 const ConfirmCard = styled.div`
   width: 540px;
@@ -109,8 +122,22 @@ const Rate = styled.h6`
 // `;
 
 const ConfirmationCard = () => {
+  useEffect(() => {
+    const rootEl = document.querySelector("#app");
+
+    if (!rootEl) {
+      return;
+    }
+
+    rootEl.style = "height: 100vh; overflow: hidden;";
+
+    return () => {
+      rootEl.style = "";
+    };
+  }, []);
+
   return (
-    <div>
+    <Container>
       <ConfirmCard>
         <Segment>
           <img src={ConfirmImg} />
@@ -145,7 +172,7 @@ const ConfirmationCard = () => {
           </Total>
         </Content> */}
       </ConfirmCard>
-    </div>
+    </Container>
   );
 };
 
