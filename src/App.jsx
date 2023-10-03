@@ -14,7 +14,7 @@ import ProductPage from "./pages/ProductPage";
 const App = () => {
   return (
     <StyleSheetManager shouldForwardProp={isPropValid}>
-      <div>
+      <div id="app">
         {/* <Home /> */}
         {/* <Headphones /> */}
         <Routes>
