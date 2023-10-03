@@ -7,15 +7,19 @@ import Button from "../button/Button";
 
 const Container = styled.div`
   width: 100vw;
-  height: 100%;
+  /* height: 100%; */
   position: absolute;
-  top: 0px;
+  /* top: 0px; */
+  top: 99px;
   left: 0px;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   z-index: 2000;
+  height: 110%;
+
+  padding-bottom: 32px;
 `;
 
 const ConfirmCard = styled.div`
@@ -30,6 +34,7 @@ const ConfirmCard = styled.div`
   /* align-items: flex-start; */
   justify-content: center;
   gap: 33px;
+  /* margin-top: 100px; */
 `;
 
 const Title = styled.h3`
@@ -129,7 +134,7 @@ const ConfirmationCard = () => {
       return;
     }
 
-    rootEl.style = "height: 100vh; overflow: hidden;";
+    rootEl.style = "height: 125vh; overflow: hidden;";
 
     return () => {
       rootEl.style = "";
