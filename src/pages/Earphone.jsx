@@ -12,7 +12,7 @@ import CheckOutCard from "../components/checkoutcard/CheckOutCard";
 import SummaryCard from "../components/summarycard/SummaryCard";
 import ConfirmationCard from "../components/confirmationcard/ConfirmationCard";
 import PriceCard from "../components/pricecard/PriceCard";
-import Cart from "../components/cart/Cart";
+import CartCard from "../components/cartcard/CartCard";
 
 const Earphone = () => {
   const [blogs, setBlogs] = useState([
@@ -36,7 +36,7 @@ const Earphone = () => {
       <SummaryCard  />
       <ConfirmationCard /> */}
       {/* <PriceCard /> */}
-      <Cart />
+      <CartCard />
       <Footer />
     </div>
   );
