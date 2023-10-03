@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import CheckOutCard from "../components/checkoutcard/CheckOutCard";
 import SummaryCard from "../components/summarycard/SummaryCard";
+import ConfirmationCard from "../components/confirmationcard/ConfirmationCard";
 import styled from "styled-components";
 import Button from "../components/button/Button";
 import { Link } from "react-router-dom";
@@ -42,7 +43,9 @@ const Layout = styled.div`
   margin-top: 32px;
 `;
 
-const Checkout = () => {
+const Checkout = ({ onClick }) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <StyledCheckOut>
       <Navbar color="primary" />
@@ -51,8 +54,9 @@ const Checkout = () => {
         <StyledLink to="#!">Go Back</StyledLink>
         <Layout>
           <CheckOutCard />
-          <SummaryCard />
+          <SummaryCard onClick={() => setOpen(true)} />
         </Layout>
+        {open && <ConfirmationCard onClose={() => setOpen(false)} />}
       </Contents>
       <Footer />
     </StyledCheckOut>
