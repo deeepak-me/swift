@@ -14,6 +14,8 @@ const Container = styled.div`
   height: 100%;
   flex-shrink: 0;
   padding: 32px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Title = styled.h6`
