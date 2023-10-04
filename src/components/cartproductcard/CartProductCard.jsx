@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import headphoneImg from "../../image/headphone3.png";
+import Counter from "../../utils/Counter";
 
 const CartProduct = styled.div`
   display: flex;
@@ -93,6 +94,7 @@ const NumberButton = styled.span`
 `;
 
 const CartProductCard = () => {
+  const { handleClick1, handleClick2, counter } = Counter();
   return (
     <div>
       <CartProduct>
@@ -110,9 +112,9 @@ const CartProductCard = () => {
         </Container>
 
         <Count>
-          <AddButton>-</AddButton>
-          <NumberButton>1</NumberButton>
-          <AddButton>+</AddButton>
+          <AddButton onClick={() => handleClick2()}>-</AddButton>
+          <NumberButton>{counter}</NumberButton>
+          <AddButton onClick={handleClick1}>+</AddButton>
         </Count>
       </CartProduct>
     </div>
