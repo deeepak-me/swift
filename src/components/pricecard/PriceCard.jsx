@@ -4,6 +4,7 @@ import headphoneImg from "../../image/headphone3.png";
 import Button from "../button/Button";
 
 import { styled } from "styled-components";
+import Counter from "../../utils/Counter";
 
 const Container = styled.div`
   display: flex;
@@ -132,6 +133,20 @@ const NumberButton = styled.span`
 `;
 
 const PriceCard = ({ blogs }) => {
+  // const [counter, setCounter] = useState(0);
+
+  // const handleClick1 = () => {
+  //   setCounter(counter + 1);
+  // };
+
+  // const handleClick2 = () => {
+  //   if (counter > 0) {
+  //     setCounter(counter - 1);
+  //   }
+  // };
+
+  const { handleClick1, handleClick2, counter } = Counter();
+
   return (
     <Container>
       {blogs.map((blog) => (
@@ -146,9 +161,9 @@ const PriceCard = ({ blogs }) => {
             <Price> {blog.price}</Price>
             <StyledButtons>
               <Count>
-                <AddButton>-</AddButton>
-                <NumberButton>1</NumberButton>
-                <AddButton>+</AddButton>
+                <AddButton onClick={() => handleClick2()}>-</AddButton>
+                <NumberButton>{counter}</NumberButton>
+                <AddButton onClick={() => handleClick1()}>+</AddButton>
               </Count>
               <Button>ADD TO CART</Button>
             </StyledButtons>
