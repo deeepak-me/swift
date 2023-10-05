@@ -125,6 +125,10 @@ const StyledLink = styled(Link)`
 const Navbar = (props) => {
   const [open, setOpen] = useState(false);
 
+  const toggleCart = () => {
+    setOpen(!open);
+  };
+
   return (
     <Container {...props}>
       <StyledNavbar>
@@ -147,11 +151,16 @@ const Navbar = (props) => {
             </StyledLink>
           </StyledLinks>
         </div>
-        <StyledLink to="" onClick={() => setOpen(true)}>
+        {/* <StyledLink to="" onClick={() => setOpen(true)}>
           <img src={cart} width={23.33} height={20} />
         </StyledLink>
       </StyledNavbar>
-      {open && <CartCard onClose={() => setOpen(false)} />}
+      {open && <CartCard onClose={() => setOpen(false)} />} */}
+        <StyledLink to="" onClick={toggleCart}>
+          <img src={cart} width={23.33} height={20} />
+        </StyledLink>
+      </StyledNavbar>
+      {open && <CartCard />}
     </Container>
 
     // <div className={styles.container}>
