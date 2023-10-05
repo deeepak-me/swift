@@ -4,6 +4,8 @@ import ConfirmImg from "../../image/confirm.svg";
 import AmountCard from "../amountcard/AmountCard";
 import { styled } from "styled-components";
 import Button from "../button/Button";
+import { Link } from "react-router-dom";
+import Home from "../../pages/Home/Home";
 
 const Container = styled.div`
   width: 100vw;
@@ -126,6 +128,17 @@ const Rate = styled.h6`
 //   margin-bottom: 100px;
 // `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+`;
+
 const ConfirmationCard = () => {
   useEffect(() => {
     const rootEl = document.querySelector("#app");
@@ -164,7 +177,9 @@ const ConfirmationCard = () => {
             <Rate> $5987 </Rate>
           </Total>
         </Content>
-        <Button>BACK TO HOME</Button>
+        <Button>
+          <StyledLink to="/swift">BACK TO HOME</StyledLink>
+        </Button>
         {/* <Content>
           <FirstSeg>
             <AmountCard />
