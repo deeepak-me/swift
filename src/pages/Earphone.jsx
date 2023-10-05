@@ -36,7 +36,7 @@ const Earphone = () => {
       <SummaryCard  />
       <ConfirmationCard /> */}
       {/* <PriceCard /> */}
-      <CartCard />
+      {/* <CartCard /> */}
       <Footer />
     </div>
   );
