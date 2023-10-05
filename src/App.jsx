@@ -9,11 +9,12 @@ import Headphones from "./pages/Headphones";
 import Earphone from "./pages/Earphone";
 import Speakers from "./pages/Speakers";
 import Checkout from "./pages/Checkout";
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
   return (
     <StyleSheetManager shouldForwardProp={isPropValid}>
-      <div>
+      <div id="app">
         {/* <Home /> */}
         {/* <Headphones /> */}
         <Routes>
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="speakers" element={<Speakers />} />
             <Route path="earphones" element={<Earphone />} />
             <Route path="checkout" element={<Checkout />} />
+            <Route path="products" element={<ProductPage />} />
           </Route>
         </Routes>
       </div>

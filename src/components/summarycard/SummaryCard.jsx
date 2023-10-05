@@ -14,6 +14,8 @@ const Container = styled.div`
   height: 100%;
   flex-shrink: 0;
   padding: 32px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Title = styled.h6`
@@ -54,7 +56,7 @@ const CheckOutBtn = styled(Button)`
   padding-right: 56px;
 `;
 
-const SummaryCard = () => {
+const SummaryCard = ({ onClick }) => {
   return (
     <Container>
       <Title>Summary</Title>
@@ -81,7 +83,7 @@ const SummaryCard = () => {
           <Title>$5986</Title>
         </Segment>
       </div>
-      <CheckOutBtn>CONTINUE & PAY</CheckOutBtn>
+      <CheckOutBtn onClick={() => onClick()}>CONTINUE & PAY</CheckOutBtn>
     </Container>
   );
 };

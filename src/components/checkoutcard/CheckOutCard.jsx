@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import RadialButton from "../../utils/RadiaButton";
 
 const Container = styled.div`
   display: flex;
@@ -9,6 +10,7 @@ const Container = styled.div`
   border-radius: 8px;
   background: #fff;
   padding: 48px;
+  width: 100%;
 `;
 
 const Title = styled.h3`
@@ -164,11 +166,11 @@ const CheckOutCard = () => {
           <SubTitle>payment details</SubTitle>
           <div>
             <Option>
-              <Radial type="radio" name="payment" id="e-Money" />
+              <RadialButton type="radio" name="payment" id="e-Money" />
               <Label htmlFor="e-Money">e-Money</Label>
             </Option>
             <Option>
-              <Radial type="radio" name="payment" id="cash" />
+              <RadialButton type="radio" name="payment" id="cash" />
               <Label htmlFor="cash">Cash on Delivery</Label>
             </Option>
           </div>

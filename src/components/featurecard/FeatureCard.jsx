@@ -25,9 +25,10 @@ const Title = styled.h3`
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 36px; /* 112.5% */
+  line-height: 36px;
   letter-spacing: 1.143px;
   text-transform: uppercase;
+  margin-bottom: 32px;
 `;
 
 const Para = styled.p`

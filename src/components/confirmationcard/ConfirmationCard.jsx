@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ConfirmImg from "../../image/confirm.svg";
 import AmountCard from "../amountcard/AmountCard";
 import { styled } from "styled-components";
 import Button from "../button/Button";
+import { Link } from "react-router-dom";
+import Home from "../../pages/Home/Home";
+
+const Container = styled.div`
+  width: 100vw;
+  /* height: 100%; */
+  position: absolute;
+  /* top: 0px; */
+  top: 99px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2000;
+  height: 110%;
+
+  padding-bottom: 32px;
+`;
 
 const ConfirmCard = styled.div`
   width: 540px;
@@ -17,6 +36,7 @@ const ConfirmCard = styled.div`
   /* align-items: flex-start; */
   justify-content: center;
   gap: 33px;
+  /* margin-top: 100px; */
 `;
 
 const Title = styled.h3`
@@ -108,9 +128,34 @@ const Rate = styled.h6`
 //   margin-bottom: 100px;
 // `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+`;
+
 const ConfirmationCard = () => {
+  useEffect(() => {
+    const rootEl = document.querySelector("#app");
+
+    if (!rootEl) {
+      return;
+    }
+
+    rootEl.style = "height: 125vh; overflow: hidden;";
+
+    return () => {
+      rootEl.style = "";
+    };
+  }, []);
+
   return (
-    <div>
+    <Container>
       <ConfirmCard>
         <Segment>
           <img src={ConfirmImg} />
@@ -132,7 +177,9 @@ const ConfirmationCard = () => {
             <Rate> $5987 </Rate>
           </Total>
         </Content>
-        <Button>BACK TO HOME</Button>
+        <Button>
+          <StyledLink to="/swift">BACK TO HOME</StyledLink>
+        </Button>
         {/* <Content>
           <FirstSeg>
             <AmountCard />
@@ -145,7 +192,7 @@ const ConfirmationCard = () => {
           </Total>
         </Content> */}
       </ConfirmCard>
-    </div>
+    </Container>
   );
 };
 

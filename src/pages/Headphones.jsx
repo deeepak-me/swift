@@ -10,7 +10,7 @@ import ProductCard from "../components/productcard/Productcard";
 import BrandCard from "../components/brandcarrd/BrandCard";
 import PriceCard from "../components/pricecard/PriceCard";
 import FeatureCard from "../components/featurecard/FeatureCard";
-import Cart from "../components/cart/Cart";
+// import Cart from "../components/cart/Cart";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import ProductDetailsCard from "../components/productdetailscard/ProductDetailsCard";

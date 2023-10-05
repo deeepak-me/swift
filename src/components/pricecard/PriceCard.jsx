@@ -4,6 +4,7 @@ import headphoneImg from "../../image/headphone3.png";
 import Button from "../button/Button";
 
 import { styled } from "styled-components";
+import Counter from "../../utils/Counter";
 
 const Container = styled.div`
   display: flex;
@@ -14,10 +15,11 @@ const Container = styled.div`
 
 const Content = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 124.5px;
   overflow: hidden;
+  width: 100%;
 `;
 
 const Item = styled.div`
@@ -130,8 +132,20 @@ const NumberButton = styled.span`
   text-transform: uppercase;
 `;
 
-const PriceCard = ({blogs}) => {
-  
+const PriceCard = ({ blogs }) => {
+  // const [counter, setCounter] = useState(0);
+
+  // const handleClick1 = () => {
+  //   setCounter(counter + 1);
+  // };
+
+  // const handleClick2 = () => {
+  //   if (counter > 0) {
+  //     setCounter(counter - 1);
+  //   }
+  // };
+
+  const { handleClick1, handleClick2, counter } = Counter();
 
   return (
     <Container>
@@ -147,9 +161,9 @@ const PriceCard = ({blogs}) => {
             <Price> {blog.price}</Price>
             <StyledButtons>
               <Count>
-                <AddButton>-</AddButton>
-                <NumberButton>1</NumberButton>
-                <AddButton>+</AddButton>
+                <AddButton onClick={() => handleClick2()}>-</AddButton>
+                <NumberButton>{counter}</NumberButton>
+                <AddButton onClick={() => handleClick1()}>+</AddButton>
               </Count>
               <Button>ADD TO CART</Button>
             </StyledButtons>

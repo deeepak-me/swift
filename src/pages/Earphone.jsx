@@ -11,6 +11,8 @@ import ImageGroupCard from "../components/imagegroupcard/ImageGroupCard";
 import CheckOutCard from "../components/checkoutcard/CheckOutCard";
 import SummaryCard from "../components/summarycard/SummaryCard";
 import ConfirmationCard from "../components/confirmationcard/ConfirmationCard";
+import PriceCard from "../components/pricecard/PriceCard";
+import CartCard from "../components/cartcard/CartCard";
 
 const Earphone = () => {
   const [blogs, setBlogs] = useState([
@@ -29,10 +31,12 @@ const Earphone = () => {
       <ProductList blogs={blogs} />
       <ProductCard />
       <BrandCard />
-      <ImageGroupCard />
+      {/* <ImageGroupCard />
       <CheckOutCard />
       <SummaryCard  />
-      <ConfirmationCard />
+      <ConfirmationCard /> */}
+      {/* <PriceCard /> */}
+      {/* <CartCard /> */}
       <Footer />
     </div>
   );
