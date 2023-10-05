@@ -49,7 +49,7 @@
 "use client";
 
 // import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // import styles from "./navbar.module.css";
@@ -58,6 +58,7 @@ import { styled, css } from "styled-components";
 
 import audiophile from "../../image/audiophile2.svg";
 import cart from "../../image/cart.svg";
+import CartCard from "../cartcard/CartCard";
 
 const Container = styled.div`
   padding-top: 34px;
@@ -115,12 +116,15 @@ const StyledLink = styled(Link)`
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 
   &:hover {
     color: #d87d4a;
   }
 `;
 const Navbar = (props) => {
+  const [open, setOpen] = useState(false);
+
   return (
     <Container {...props}>
       <StyledNavbar>
@@ -143,10 +147,11 @@ const Navbar = (props) => {
             </StyledLink>
           </StyledLinks>
         </div>
-        <StyledLink to="">
+        <StyledLink to="" onClick={() => setOpen(true)}>
           <img src={cart} width={23.33} height={20} />
         </StyledLink>
       </StyledNavbar>
+      {open && <CartCard onClose={() => setOpen(false)} />}
     </Container>
 
     // <div className={styles.container}>
