@@ -4,6 +4,15 @@ import CartProductCard from "../cartproductcard/CartProductCard";
 import styled from "styled-components";
 import Button from "../button/Button";
 
+import ReactDOM from "react-dom";
+
+const StyledCartCard = styled.div`
+  position: absolute;
+  z-index: 2000;
+  top: 130px;
+  right: 165px;
+`;
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,7 +20,7 @@ const Container = styled.div`
   border-radius: 8px;
   background: #fff;
   width: 377px;
-  height: 488px;
+  /* height: 488px; */
   gap: 32px;
 `;
 
@@ -62,9 +71,10 @@ const Title = styled.h6`
   text-transform: uppercase;
 `;
 
-const CartCard = () => {
-  return (
-    <div>
+const CartCard = ({ Open }) => {
+  // if (!open) return null;
+  return ReactDOM.createPortal(
+    <StyledCartCard>
       <Container>
         <Top>
           <Title>
@@ -83,7 +93,8 @@ const CartCard = () => {
         </Bottom>
         <Button>checkout</Button>
       </Container>
-    </div>
+    </StyledCartCard>,
+    document.getElementById("portal-root")
   );
 };
 
