@@ -17,6 +17,7 @@ function Speakers() {
       about:
         "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
       price: "$ 2,999",
+      index: 1,
     },
     {
       image: speakerImgtwo,
@@ -24,6 +25,7 @@ function Speakers() {
       about:
         "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
       price: "$ 2,999",
+      index: 2,
     },
   ]);
   return (
