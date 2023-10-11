@@ -18,6 +18,9 @@ const Content = styled.div`
   align-items: center;
   gap: 124.5px;
   overflow: hidden;
+
+  ${(props) =>
+    props.isEven ? "flex-direction:row;" : "flex-direction:row-reverse;"}
 `;
 
 const Item = styled.div`
@@ -82,19 +85,19 @@ const StyledButtons = styled.div`
 const ProductDetailsCard = ({ blog }) => {
   return (
     <Container>
-        <Content>
-          <Item>
-            <img src={blog.image} />
-          </Item>
-          <Info>
-            <Intro>NEW PRODUCT</Intro>
-            <Title>{blog.title}</Title>
-            <Para>{blog.about}</Para>
-            <StyledButtons>
-              <Button>SEE PRODUCT</Button>
-            </StyledButtons>
-          </Info>
-        </Content>
+      <Content key={blog.index} isEven={blog.index % 2 === 1}>
+        <Item>
+          <img src={blog.image} />
+        </Item>
+        <Info>
+          <Intro>NEW PRODUCT</Intro>
+          <Title>{blog.title}</Title>
+          <Para>{blog.about}</Para>
+          <StyledButtons>
+            <Button>SEE PRODUCT</Button>
+          </StyledButtons>
+        </Info>
+      </Content>
       {/* {blogs.map((blog) => (
         <Content>
           <Item>
