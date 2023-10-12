@@ -90,7 +90,7 @@ const ProductDetailsCard = ({ blog }) => {
           <img src={blog.image} />
         </Item>
         <Info>
-          <Intro>NEW PRODUCT</Intro>
+          <Intro>{blog.tag}</Intro>
           <Title>{blog.title}</Title>
           <Para>{blog.about}</Para>
           <StyledButtons>
