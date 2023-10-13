@@ -132,7 +132,7 @@ const NumberButton = styled.span`
   text-transform: uppercase;
 `;
 
-const PriceCard = ({ blogs }) => {
+const PriceCard = ({ product }) => {
   // const [counter, setCounter] = useState(0);
 
   // const handleClick1 = () => {
@@ -149,27 +149,25 @@ const PriceCard = ({ blogs }) => {
 
   return (
     <Container>
-      {blogs.map((blog) => (
-        <Content>
-          <Item>
-            <img src={blog.image} />
-          </Item>
-          <Info>
-            <Intro>NEW PRODUCT</Intro>
-            <Title>{blog.title}</Title>
-            <Para>{blog.about}</Para>
-            <Price> {blog.price}</Price>
-            <StyledButtons>
-              <Count>
-                <AddButton onClick={() => handleClick2()}>-</AddButton>
-                <NumberButton>{counter}</NumberButton>
-                <AddButton onClick={() => handleClick1()}>+</AddButton>
-              </Count>
-              <Button>ADD TO CART</Button>
-            </StyledButtons>
-          </Info>
-        </Content>
-      ))}
+      <Content>
+        <Item>
+          <img src={product.image} />
+        </Item>
+        <Info>
+          <Intro>NEW PRODUCT</Intro>
+          <Title>{product.title}</Title>
+          <Para>{product.about}</Para>
+          <Price> {product.price}</Price>
+          <StyledButtons>
+            <Count>
+              <AddButton onClick={() => handleClick2()}>-</AddButton>
+              <NumberButton>{counter}</NumberButton>
+              <AddButton onClick={() => handleClick1()}>+</AddButton>
+            </Count>
+            <Button>ADD TO CART</Button>
+          </StyledButtons>
+        </Info>
+      </Content>
     </Container>
 
     // <Container>
