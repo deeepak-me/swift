@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import FeatureCard from "../components/featurecard/FeatureCard";
 import ImageGroupCard from "../components/imagegroupcard/ImageGroupCard";
 import LongProductCard from "../components/longproductcard/Longproductcard";
@@ -11,6 +11,7 @@ import ProductCard from "../components/productcard/Productcard";
 import BrandCard from "../components/brandcarrd/BrandCard";
 import PriceCard from "../components/pricecard/PriceCard";
 import headphoneImgOne from "../image/headphone3.png";
+import axios from "axios";
 
 const Contents = styled.div`
   padding-top: 145px;
@@ -44,32 +45,58 @@ const Layout = styled.div`
 `;
 
 const ProductPage = () => {
-  const [blogs, setBlogs] = useState([
-    {
-      image: headphoneImgOne,
-      title: "XX99 Mark I Headphones",
-      about:
-        "The new XX99 Mark II headphones is the pinnacle of pristine audio.It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
-      price: "$ 2,999",
-    },
-  ]);
+  // const [blogs, setBlogs] = useState([
+  //   {
+  //     image: headphoneImgOne,
+  //     title: "XX99 Mark I Headphones",
+  //     about:
+  //       "The new XX99 Mark II headphones is the pinnacle of pristine audio.It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
+  //     price: "$ 2,999",
+  //   },
+  // ]);
+
+  const { id, category } = useParams();
+  const [blogs, setBlogs] = useState(null);
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (product) => {
+    // Add the selected product to the cart.
+    setCart([...cart, product]);
+  };
+
+  useEffect(() => {
+    if (id) {
+      fetchProduct(id);
+    }
+  }, [id]);
+
+  async function fetchProduct(id) {
+    try {
+      const product = await axios.get(`http://localhost:8000/products/${id}`);
+
+      setBlogs(product.data);
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
   return (
     <div>
       <Navbar color="primary" />
-
-      <Contents>
-        <StyledLink to="#!">Go Back</StyledLink>
-        <Layout>
-          <PriceCard blogs={blogs} />
-          <FeatureCard />
-          <ImageGroupCard />
-          <div>you may also like</div>
-          <SuggestionCard />
-          <ProductCard />
-          <BrandCard />
-        </Layout>
-      </Contents>
+      {blogs && (
+        <Contents>
+          <StyledLink to="#!">Go Back</StyledLink>
+          <Layout>
+            <PriceCard product={blogs} />
+            <FeatureCard product={blogs} />
+            <ImageGroupCard />
+            <div>you may also like</div>
+            <SuggestionCard />
+            <ProductCard />
+            <BrandCard />
+          </Layout>
+        </Contents>
+      )}
       <Footer />
     </div>
   );
