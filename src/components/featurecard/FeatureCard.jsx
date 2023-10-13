@@ -69,54 +69,43 @@ const ItemName = styled.span`
   opacity: 0.5;
 `;
 
-const FeatureCard = () => {
+const FeatureCard = ({ product }) => {
   return (
     <Container>
-      <Info>
+      <Info key={product.id}>
         <FeatureBox>
           <Title>FEATURES</Title>
-          <Para>
-            Featuring a genuine leather head strap and premium earcups, these
-            headphones deliver superior comfort for those who like to enjoy
-            endless listening. It includes intuitive controls designed for any
-            situation. Whether you’re taking a business call or just in your own
-            personal space, the auto on/off and pause features ensure that
-            you’ll never miss a beat. The advanced Active Noise Cancellation
-            with built-in equalizer allow you to experience your audio world on
-            your terms. It lets you enjoy your audio in peace, but quickly
-            interact with your surroundings when you need to. Combined with
-            Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the
-            XX99 Mark II headphones gives you superior sound, cutting-edge
-            technology, and a modern design aesthetic.
-          </Para>
+          <Para>{product.features}</Para>
         </FeatureBox>
         <div>
           <Title>in the box</Title>
           <div>
-            <BoxItems>
-              <Ul>
-                <Li>
-                  <Count>1X</Count>
-                  <ItemName>Headphone Unit</ItemName>
-                </Li>
-                <Li>
-                  <Count>2X</Count>
-                  <ItemName>Replacement Earcups</ItemName>
-                </Li>
-                <Li>
-                  <Count>1X</Count>
-                  <ItemName>User Manual</ItemName>
-                </Li>
-                <Li>
-                  <Count>1X</Count>
-                  <ItemName>3.5mm 5m Audio Cable</ItemName>
-                </Li>
-                <Li>
-                  <Count>1X</Count>
-                  <ItemName>Travel Bag</ItemName>
-                </Li>
-              </Ul>
-            </BoxItems>
+            {product.boxItems.map((boxItem) => (
+              <BoxItems key={boxItem.label}>
+                <Ul>
+                  <Li>
+                    <Count>{boxItem.count}X</Count>
+                    <ItemName>{boxItem.label}</ItemName>
+                  </Li>
+                  {/* <Li>
+                      <Count>2X</Count>
+                      <ItemName>Replacement Earcups</ItemName>
+                    </Li>
+                    <Li>
+                      <Count>1X</Count>
+                      <ItemName>User Manual</ItemName>
+                    </Li>
+                    <Li>
+                      <Count>1X</Count>
+                      <ItemName>3.5mm 5m Audio Cable</ItemName>
+                    </Li>
+                    <Li>
+                      <Count>1X</Count>
+                      <ItemName>Travel Bag</ItemName>
+                    </Li> */}
+                </Ul>
+              </BoxItems>
+            ))}
           </div>
         </div>
       </Info>
