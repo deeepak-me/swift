@@ -4,6 +4,7 @@ import headphoneImg from "../../image/headphone3.png";
 import Button from "../button/Button";
 
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -82,10 +83,14 @@ const StyledButtons = styled.div`
   gap: 16px;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 const ProductDetailsCard = ({ blog }) => {
   return (
-    <Container>
-      <Content key={blog.index} isEven={blog.index % 2 === 1}>
+    <Container key={blog.id}>
+      <Content isEven={blog.index % 2 === 1}>
         <Item>
           <img src={blog.image} />
         </Item>
@@ -93,9 +98,14 @@ const ProductDetailsCard = ({ blog }) => {
           <Intro>{blog.tag}</Intro>
           <Title>{blog.title}</Title>
           <Para>{blog.about}</Para>
-          <StyledButtons>
+          <StyledLink to={`/swift/products/${blog.id}`}>
+            <StyledButtons>
+              <Button>SEE PRODUCT</Button>
+            </StyledButtons>
+          </StyledLink>
+          {/* <StyledButtons>
             <Button>SEE PRODUCT</Button>
-          </StyledButtons>
+          </StyledButtons> */}
         </Info>
       </Content>
       {/* {blogs.map((blog) => (
