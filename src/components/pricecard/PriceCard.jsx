@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import headphoneImg from "../../image/headphone3.png";
 import Button from "../button/Button";
 
 import { styled } from "styled-components";
 import Counter from "../../utils/Counter";
+import { useCart } from "../../context/cartContext";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -144,6 +147,32 @@ const PriceCard = ({ product }) => {
   //     setCounter(counter - 1);
   //   }
   // };
+  const { id, category } = useParams();
+  const [products, setProducts] = useState([]);
+  // const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    fetchProduct(id);
+  }, [id]);
+
+  async function fetchProduct(id) {
+    try {
+      const product = await axios.get(`http://localhost:8000/products/${id}`);
+
+      setProducts(product.data);
+      // console.log(product.data);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  // const handleAddToCart = (product) => {
+  //   // Add the selected product to the cart.
+  //   setCart([...cart, product]);
+  // };
+
+  const { state, addToCart } = useCart();
+  // console.log(state);
 
   const { handleClick1, handleClick2, counter } = Counter();
 
@@ -154,7 +183,7 @@ const PriceCard = ({ product }) => {
           <img src={product.image} />
         </Item>
         <Info>
-          <Intro>NEW PRODUCT</Intro>
+          <Intro>{product.tag}</Intro>
           <Title>{product.title}</Title>
           <Para>{product.about}</Para>
           <Price> {product.price}</Price>
@@ -164,7 +193,7 @@ const PriceCard = ({ product }) => {
               <NumberButton>{counter}</NumberButton>
               <AddButton onClick={() => handleClick1()}>+</AddButton>
             </Count>
-            <Button>ADD TO CART</Button>
+            <Button onClick={() => addToCart(product)}>ADD TO CART</Button>
           </StyledButtons>
         </Info>
       </Content>
