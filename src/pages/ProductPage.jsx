@@ -57,12 +57,12 @@ const ProductPage = () => {
 
   const { id, category } = useParams();
   const [blogs, setBlogs] = useState(null);
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
-  const handleAddToCart = (product) => {
-    // Add the selected product to the cart.
-    setCart([...cart, product]);
-  };
+  // const handleAddToCart = (product) => {
+  //
+  //   setCart([...cart, product]);
+  // };
 
   useEffect(() => {
     if (id) {
