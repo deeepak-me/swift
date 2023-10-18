@@ -71,7 +71,7 @@ const SuggestionCard = () => {
   return (
     <SuggestionCards>
       {products.map((product) => (
-        <Container>
+        <Container key={product.id}>
           <div key={product.id}>
             <ImgWrapper>
               <img src={product.image} />
