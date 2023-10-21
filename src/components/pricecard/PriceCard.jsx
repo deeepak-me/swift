@@ -171,10 +171,22 @@ const PriceCard = ({ product }) => {
   //   setCart([...cart, product]);
   // };
 
-  const { state, addToCart } = useCart();
+  const { cart, addToCart } = useCart();
   // console.log(state);
 
   const { handleClick1, handleClick2, counter } = Counter();
+
+  async function handleAddToCart(product) {
+    addToCart(product);
+
+    await axios.post(`http://localhost:8000/carts/1/items`, {
+      title: product.title,
+      price: product.price,
+      productId: product.id,
+      count: counter,
+      cartId: 1,
+    });
+  }
 
   return (
     <Container>
@@ -193,7 +205,9 @@ const PriceCard = ({ product }) => {
               <NumberButton>{counter}</NumberButton>
               <AddButton onClick={() => handleClick1()}>+</AddButton>
             </Count>
-            <Button onClick={() => addToCart(product)}>ADD TO CART</Button>
+            <Button onClick={() => handleAddToCart(product)}>
+              ADD TO CART
+            </Button>
           </StyledButtons>
         </Info>
       </Content>
