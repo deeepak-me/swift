@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import headphoneImg from "../../image/headphone3.png";
 import Counter from "../../utils/Counter";
+import { useCart } from "../../context/cartContext";
 
 const CartProduct = styled.div`
   display: flex;
@@ -93,30 +94,41 @@ const NumberButton = styled.span`
   text-transform: uppercase;
 `;
 
-const CartProductCard = () => {
+const CartProductCard = ({ item, cart }) => {
   const { handleClick1, handleClick2, counter } = Counter();
+  // console.log(item.title);
+
+  cart.map((item) => {
+    console.log(item.title);
+  });
+
+  // const { cart } = useCart();
   return (
     <div>
-      <CartProduct>
-        <Container>
-          <ImageBg>
-            <Image src={headphoneImg} />
-          </ImageBg>
-          <div>
-            {/* <ProductGp>
+      {cart.map((item) => {
+        return (
+          <CartProduct>
+            <Container>
+              <ImageBg>
+                <Image src={headphoneImg} />
+              </ImageBg>
+              <div>
+                {/* <ProductGp>
               <ProductName>XX99 MK II</ProductName>
             </ProductGp> */}
-            <ProductName>XX99 MK II</ProductName>
-            <ProductPrice>$2999</ProductPrice>
-          </div>
-        </Container>
+                <ProductName>{item.title}</ProductName>
+                <ProductPrice>$2999</ProductPrice>
+              </div>
+            </Container>
 
-        <Count>
-          <AddButton onClick={() => handleClick2()}>-</AddButton>
-          <NumberButton>{counter}</NumberButton>
-          <AddButton onClick={handleClick1}>+</AddButton>
-        </Count>
-      </CartProduct>
+            <Count>
+              <AddButton onClick={() => handleClick2()}>-</AddButton>
+              <NumberButton>{counter}</NumberButton>
+              <AddButton onClick={handleClick1}>+</AddButton>
+            </Count>
+          </CartProduct>
+        );
+      })}
     </div>
   );
 };
