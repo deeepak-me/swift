@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Button from "../button/Button";
 
 import ReactDOM from "react-dom";
+import { useCart } from "../../context/cartContext";
 
 const StyledCartCard = styled.div`
   position: absolute;
@@ -72,20 +73,25 @@ const Title = styled.h6`
 `;
 
 const CartCard = ({ Open }) => {
+  const { cart } = useCart();
   // if (!open) return null;
   return ReactDOM.createPortal(
     <StyledCartCard>
       <Container>
         <Top>
           <Title>
-            CART (<span>3</span>)
+            CART (<span>{cart.length}</span>)
           </Title>
           <StyledLink to="!#">Remove All</StyledLink>
         </Top>
         <Center>
-          <CartProductCard />
-          <CartProductCard />
-          <CartProductCard />
+          {/* {cart.map((item) => {
+            <CartProductCard item={item} key={item.id} />;
+          })} */}
+          <CartProductCard cart={cart} />
+
+          {/* <CartProductCard />
+          <CartProductCard /> */}
         </Center>
         <Bottom>
           <Total>TOTAL</Total>
