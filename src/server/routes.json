@@ -1,0 +1,4 @@
+{
+  "/carts/:id/items/": "/items?cartId=:id",
+  "/carts/:id/items/:itemId": "/items/:itemId"
+}
