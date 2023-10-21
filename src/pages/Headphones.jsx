@@ -65,6 +65,7 @@ const Headphones = () => {
       {/* <PriceCard blogs={blogs}/> */}
       {/* <FeatureCard />
       <SuggestionCard /> */}
+      {/* <FeatureCard blogs={blogs} /> */}
       <ProductCard />
       <BrandCard />
       <Footer />
