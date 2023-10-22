@@ -4,7 +4,7 @@
       "id": 1,
       "title": "XX99 Mark 11 Headphones",
       "about": "The new XX99 Mark II headphones is the pinnacle of pristine audio.It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
-      "price": "$ 2,999",
+      "price": 2999,
       "index": 1,
       "categories": "headphones",
       "image": "https://picsum.photos/350/386",
@@ -37,7 +37,7 @@
       "id": 2,
       "title": "XX99 Mark 1 Headphones",
       "about": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
-      "price": "$ 1,750",
+      "price": 1750,
       "index": 2,
       "image": "https://picsum.photos/350/386",
       "categories": "headphones",
@@ -65,7 +65,7 @@
       "id": 3,
       "title": "XX59 Headphones",
       "about": "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
-      "price": "$ 899",
+      "price": 899,
       "index": 3,
       "image": "https://picsum.photos/350/386",
       "categories": "headphones",
@@ -93,7 +93,7 @@
       "id": 4,
       "title": "YX1 WIRELESS EARPHONES",
       "about": "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
-      "price": "$ 599",
+      "price": 599,
       "index": 1,
       "image": "https://picsum.photos/350/386",
       "categories": "earphones",
@@ -126,7 +126,7 @@
       "id": 5,
       "title": "ZX9 SPEAKER",
       "about": "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
-      "price": "$ 4,500",
+      "price": 4500,
       "index": 1,
       "image": "https://picsum.photos/350/386",
       "categories": "speakers",
@@ -159,7 +159,7 @@
       "id": 6,
       "title": "ZX7 SPEAKER",
       "about": "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
-      "price": "$ 3,500",
+      "price": 3500,
       "index": 2,
       "image": "https://picsum.photos/350/386",
       "categories": "speakers",
@@ -200,7 +200,8 @@
       "price": 1000,
       "productId": 3,
       "count": 2,
-      "cartId": 1
+      "cartId": 1,
+      "image": "https://picsum.photos"
     },
     {
       "title": "ZX9 SPEAKER",
@@ -208,7 +209,8 @@
       "productId": 5,
       "count": 0,
       "cartId": 1,
-      "id": 2
+      "id": 2,
+      "image": "https://picsum.photos"
     }
   ]
 }
