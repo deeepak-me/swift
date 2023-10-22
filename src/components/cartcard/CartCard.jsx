@@ -85,13 +85,10 @@ const CartCard = ({ Open }) => {
           <StyledLink to="!#">Remove All</StyledLink>
         </Top>
         <Center>
-          {/* {cart.map((item) => {
-            <CartProductCard item={item} key={item.id} />;
-          })} */}
-          <CartProductCard cart={cart} />
-
-          {/* <CartProductCard />
-          <CartProductCard /> */}
+          {cart.map((item) => {
+            return <CartProductCard item={item} key={item.id} />;
+          })}
+          {/* <CartProductCard cart={cart} /> */}
         </Center>
         <Bottom>
           <Total>TOTAL</Total>
