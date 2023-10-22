@@ -23,6 +23,7 @@ const ImageBg = styled.div`
   background: #f1f1f1;
   padding: 12px;
   align-self: center;
+  display: flex;
 `;
 
 const Image = styled.img`
@@ -98,37 +99,38 @@ const CartProductCard = ({ item, cart }) => {
   const { handleClick1, handleClick2, counter } = Counter();
   // console.log(item.title);
 
-  cart.map((item) => {
-    console.log(item.title);
-  });
+  // cart.map((item) => {
+  //   console.log(item.title);
+  // });
 
   // const { cart } = useCart();
   return (
     <div>
-      {cart.map((item) => {
-        return (
-          <CartProduct>
-            <Container>
-              <ImageBg>
-                <Image src={headphoneImg} />
-              </ImageBg>
-              <div>
-                {/* <ProductGp>
+      {/* {cart.map((item) => { */}
+      {/* return ( */}
+      <CartProduct>
+        <Container>
+          <ImageBg>
+            {/* <Image src={headphoneImg} /> */}
+            <Image src={item.image} />
+          </ImageBg>
+          <div>
+            {/* <ProductGp>
               <ProductName>XX99 MK II</ProductName>
             </ProductGp> */}
-                <ProductName>{item.title}</ProductName>
-                <ProductPrice>$2999</ProductPrice>
-              </div>
-            </Container>
+            <ProductName>{item.title}</ProductName>
+            <ProductPrice>$ {item.price}</ProductPrice>
+          </div>
+        </Container>
 
-            <Count>
-              <AddButton onClick={() => handleClick2()}>-</AddButton>
-              <NumberButton>{counter}</NumberButton>
-              <AddButton onClick={handleClick1}>+</AddButton>
-            </Count>
-          </CartProduct>
-        );
-      })}
+        <Count>
+          <AddButton onClick={() => handleClick2()}>-</AddButton>
+          <NumberButton>{counter}</NumberButton>
+          <AddButton onClick={handleClick1}>+</AddButton>
+        </Count>
+      </CartProduct>
+      {/* ); */}
+      {/* })} */}
     </div>
   );
 };
