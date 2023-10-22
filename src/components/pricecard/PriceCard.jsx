@@ -185,6 +185,7 @@ const PriceCard = ({ product }) => {
       productId: product.id,
       count: counter,
       cartId: 1,
+      image: product.image,
     });
   }
 
@@ -198,7 +199,7 @@ const PriceCard = ({ product }) => {
           <Intro>{product.tag}</Intro>
           <Title>{product.title}</Title>
           <Para>{product.about}</Para>
-          <Price> {product.price}</Price>
+          <Price> $ {product.price}</Price>
           <StyledButtons>
             <Count>
               <AddButton onClick={() => handleClick2()}>-</AddButton>
